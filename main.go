@@ -40,6 +40,9 @@ func deleteMovie(w http.ResponseWriter, r *http.Request) {
 			break
 		}
 	}
+
+	// Remaining Movies
+	json.NewEncoder(w).Encode(movies)
 }
 
 // Get Movie Function
